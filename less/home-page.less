@@ -122,7 +122,12 @@ header{
         text-align: center;
         width: 80%;
         .displayFlex(row, center, center);
+        transition: 1s;
         .btn(rgb(80, 80, 80), white, 2rem);
+
+        &:hover{
+          .coolAnimation();
+        }
 
         @media @mobile{
           width: 100%;

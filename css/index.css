@@ -136,6 +136,7 @@ table {
 * {
   box-sizing: border-box;
   max-width: 100%;
+  text-decoration: none;
 }
 html {
   font-size: 62.5%;
@@ -177,6 +178,7 @@ img {
   margin: 0 auto;
 }
 nav {
+  transition: 1s;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -368,12 +370,18 @@ header .header-text h1 {
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  transition: 1s;
   background: #505050;
   color: white;
   font-size: 2rem;
   border-radius: 10px;
   font-weight: 700;
   padding: 5%;
+}
+.home .content-pick .destination .btn:hover {
+  transition: 1s;
+  color: #212529;
+  background: #17A2B8;
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
