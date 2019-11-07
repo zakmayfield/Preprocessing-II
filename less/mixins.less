@@ -1,1 +1,17 @@
 // Mixins in here
+
+.btn(@bgColor, @color, @fontSize){
+  background: @bgColor;
+  color: @color;
+  font-size: @fontSize;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 5%;
+}
+
+.displayFlex(@flow, @just, @align){
+  display: flex;
+  flex-flow: @flow;
+  justify-content: @just;
+  align-items: @align;  
+}
