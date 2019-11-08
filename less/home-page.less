@@ -1,21 +1,66 @@
+
+
+header{
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 2vh;
+  border-bottom: 2px dashed gray;
+
+  @media @mobile{
+    width: 90%;
+  }
+
+  .hero{
+
+
+  }//hero
+
+  .header-text{
+
+    h1{
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      @media @mobile{
+        font-size: 3rem;
+      }
+    }//h1
+
+    p{
+
+    }//p
+  }//header-text
+}//header
+
+
 .home {
+  @media @mobile{
+    width: 90%;
+  }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @mobile{
+      .displayFlex(column, center, center);
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +71,9 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      .displayFlex(column-reverse, center, center);
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +90,11 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      .displayFlex(column, center, center);
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +106,38 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      .displayFlex(column, center, center)
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile{
+        width: 75%;
+      }
+
+      .btn{
+        text-align: center;
+        width: 80%;
+        .displayFlex(row, center, center);
+        transition: 1s;
+        .btn(rgb(80, 80, 80), white, 2rem);
+
+        &:hover{
+          .coolAnimation();
+        }
+
+        @media @mobile{
+          width: 100%;
+          .btn(rgb(80, 83, 95), white, 2rem);
+          padding: 3%;
+          font-size: 1.5rem;
+          font-weight: 400;
+          
+        }
+      }
     }
   }
 }// home

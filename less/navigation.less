@@ -1,1 +1,50 @@
 // Navigation Styles here
+
+nav{
+  transition: 1s;
+  .displayFlex(row, space-between, center);
+  padding: 2vh 5%;
+  border-bottom: 2px dashed gray;
+
+  @media @mobile{
+    .displayFlex(column, center, space-between);
+    width: 100%;
+    padding: 1vh 0;
+  }
+
+  .logo-cont{
+
+    
+    p{
+      font-size: 4rem;
+      padding: 0;
+      font-family: @headingFont;
+
+      @media @mobile{
+        font-size: 3rem;
+      }
+      
+    }//p
+  }//logo-cont
+
+  .nav-items{
+    width: 40%;
+    .displayFlex(row, space-around, center);
+
+    @media @mobile{
+      .displayFlex(row, center, space-around);
+      width: 100%;
+    }
+    
+    a{
+      font-size: 1.75rem;
+      text-decoration: none;
+      color: black;
+      padding: 0 5%;
+      @media @mobile{
+        font-size: 1.5rem;
+      }
+      
+    }//a
+  }//nav-items
+}//nav
